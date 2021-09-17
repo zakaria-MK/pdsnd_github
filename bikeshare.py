@@ -1,6 +1,5 @@
 import time
 import pandas as pd
-import numpy as np
 import datetime 
 
 CITY_DATA = { 'chicago': 'chicago.csv',
@@ -282,9 +281,13 @@ def main():
       else:
         break
 
-    restart = input('\nWould you like to restart? Enter yes or no.\n')
+    restart = new_func()
     if restart.lower() != 'yes':
       break
+
+def new_func():
+    restart = input('\nWould you like to restart? Enter yes or no.\n')
+    return restart
 
 
 if __name__ == "__main__":
